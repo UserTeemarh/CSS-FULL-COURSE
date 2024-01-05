@@ -3,83 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data types</title>
+    <title>DATA TYPES IN JAVASCRIPT</title>
 </head>
 <body>
     <style>
+        html {
+            font-size: 122.5%;
+            background-color: black;
+        }
         body {
+            padding: 10px 10px;
             background: linear-gradient(to top right, #0b1f49, #4f8eab);
             background-repeat: no-repeat;
             background-size: cover;
             color: white;
-            text-transform: capitalize;
-            font-size: 25px;
         }
-        .dl {
-            font-size: 45px;
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            margin: 0;
+            padding: 0;
         }
+        table {
+            border: 2px  #0b1f49;
+            border-style: groove;
+            border-collapse: collapse;
+        }
+        table, thead, th, tbody, td tr {
+            padding: 10px;
+        }
+        tbody td {
+            padding: 10px 10px;
+        }
+        tbody td:first-child {
+            font-weight: 800;
+        }
+        li {
+            margin: 10px 10px;
+        }
+        @media (max-width: 600px) {
+            html {
+                font-size: 33.5%;
+            }
+            li {
+                margin: 3px 3px;
+            }
+            dd {
+                margin: 5px 5px;
+            }
+            table {
+            border: 2px  #0b1f49;
+            border-style: groove;
+            border-collapse: collapse;
+            }
+            table, thead, th, tbody, td tr {
+                padding: 5px;
+            }
+            tbody td {
+                padding: 5px 5px;
+            }
+        }
+
+        
 </style>
-    <h1><center>data types</center></h1>
-    <p>data types describe the different types or kinds  of data that going to be stored in variables.</p>
-    <h2>they are seven types of primitive data types in javascripts</h2>
-    <ol>
-        <li>Number</li>
-        <li>strings</li>
-        <li>boolean</li>
-        <li>undefined</li>
-        <li>null</li>
-        <li>symbol</li>
-        <li>bigInt</li>
-    </ol>
-    <dt>
-        <dl>Number</dl>
-        <dd>they are floating pointing number: used for decimals and integers</dd>
-    </dt>
-    <dt>
-        <dl>strings</dl>
-        <dd>they are sequence of text: used for text </dd>
-    </dt>
-    <dt>
-        <dl>boolean</dl>
-        <dd>they are logical types that can only be used for true or false: Used for taking decisions </dd>
-    </dt>
-    <dt>
-        <dl>undefined</dl>
-        <dd>value taken by a variable that is not yet defined</dd>
-    </dt>
-    <dt>
-        <dl>null</dl>
-        <dd>also means empty value</dd>
-    </dt>
-    <dt>
-        <dl>symbol</dl>
-        <dd>value that is unique and that cannot be changed</dd>
-    </dt>
-    <dt>
-        <dl>digInt</dl>
-        <dd>larger intergers than the number types can hold</dd>
-    </dt>
-    <h3>types of comment in javascripts</h3>
-    <ul>
-        <li>single line comment</li>
-        <li>multi line comment</li>
-    </ul>
-    <dt>
-        <dl>dynamic typing</dl>
-        <dd>dynamic typing enables us to change the value inside of a variable</dd>
-    </dt>
-    <fieldset style="margin: 30px;">
-        <legend>exercises</legend>
+    <h1>DATA TYPES IN JAVASCRIPT</h1>
+    <p>Data types in JavaScript define the data type that a variable can store.</p>
+    <h2><u>Types of Data Types in JavaScript</u></h2>
+    <h3 style="font-size: larger;">Primitive Data Types:</h3>
+    <p>Primitive data types are the predefined data types provided by JavaScript language. They are also known as in-built data types.</p>
+    <p>All primitives are immutable; that is, they cannot be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned to a new value, but the existing value can not be changed. The language does not offer utilities to mutate primitive values.</p>
+    <h3 style="font-style: italic;"><u>Types of Primitive Data Types</u></h3>
+    <table border="2">
+        <thead>
+            <th>DATA TYPES</th>
+            <th>DESCRIPTION</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Number</td>
+                <td>Number is a numeric data type:; <i>integers, floats,doubles</i></td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td> A string is a sequence of characters used to represent text.</td>
+            </tr>
+            <tr>
+                <td>Boolean</td>
+                <td>Boolean is a logical data type that can have only the values true or false.</td>
+            </tr>
+            <tr>
+                <td>Undefined</td>
+                <td><small>Undefined</small> is a primitive value automatically assigned to variables that have just been declared, or to formal arguments for which there are no actual arguments.</td>
+            </tr>
+            <tr>
+                <td>BigInt</td>
+                <td>The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary magnitude. <br> Integers (numbers without a period or exponent notation) are accurate up to 15 digits:Integers (numbers without a period or exponent notation) are accurate up to 15 digits:</td>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td>A symbol is a data type that represents unique, unforgeable identifiers. They are sometimes called atoms. <br>Symbol is one of the primitive types and can be created using the Symbol() factory method that returns a different symbol each time.</td>
+            </tr>
+            <tr>
+                <td>Null</td>
+                <td>A <small>null</small> value represents a reference that points, generally intentionally, to a nonexistent or invalid object or address.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2><u>Reference Data Types</u></h2>
+    <p>Reference data types, unlike primitive data types, are dynamic in nature. That is, they do not have a fixed size.</p>
+    <h3><i>Examples of Reference Data Types</i></h3>
+    <table border="2">
+        <caption><marquee behavior="alternate" direction="right">Reference Data Types and Description.</marquee></caption>
+        <thead>
+            <th>Reference Data Types</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <td>Object</td>
+            <td>An object is a standalone entity, with properties and type.</td>
+            <tr>
+                <td>Array</td>
+                <td>It stores multiple values and elements in one variable. <br> These values can be of any data type — meaning you can store a string, number, boolean, and other data types in one variable.</td>
+            </tr>
+            <tr>
+                <td>Function</td>
+                <td>A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <fieldset style="margin: 10px;">
+        <legend>Exercise</legend>
         <ul>
-            <li>declare a variable called 'myCountry'. set it value according to your country</li>
-            <li>declare another variable as 'myFavoriteShow' set the value to be boolean</li>
-            <li>declare a variable of 'myLearning' and dont assign it with any value yet</li>
-            <li>log the typeof of ''myCountry', 'myFavoriteShow' and 'myLearning' in the console</li>
+            <li>Declare a variable called 'myCountry'. set it value according to your country</li>
+            <li>Declare another variable as 'myFavoriteShow' set the value to be boolean</li>
+            <li>Declare a variable of 'myLearning' and dont assign it with any value yet</li>
+            <li>Log the typeof of ''myCountry', 'myFavoriteShow' and 'myLearning' in the console</li>
         </ul>
         <!--  -->
     </fieldset>
     <!-- illustrations of operator typeof -->
-    <!-- illustration of object and primitive --> 
     <script>
 //         var key = 2 + 2;
 

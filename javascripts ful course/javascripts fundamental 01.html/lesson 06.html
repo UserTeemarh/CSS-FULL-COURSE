@@ -1,63 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strings and Template literals</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        body {
-            height: 100vh;
-            background: linear-gradient(to top right, #0b1f49, #4f8eab);
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: white;
-            text-transform: capitalize;
-            font-size: 25px;
-    }
-</style>
-    <h1><center>Strings and Template Literals</center></h1>
-    <p>template literals are literal delimited with backtick (``) characters, allowing for multi-line string, string interpolation with embedded expression, and special construct.</p>
-    <p>it allows multiple variable to be stored or log at the same time or together</p>
-   <!-- illustrations -->
-    <fieldset>
-        <legend>exercise</legend>
+      html {
+        font-size: 130.5%;
+      }
+      body {
+        background: linear-gradient(to top right, #0b1f49, #4f8eab);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+      }
+      p {
+        text-indent: 15px;
+      }
+      h1 {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        text-decoration: underline;
+      }
+      ul li {
+        font-size: 20px;
+        margin: 10px;
+        font-weight: 900;
+      }
+      ul li ul li,
+      ol li ul li {
+        font-weight: 100;
+        border-radius: 10px;
+        font-size: 17px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px 20px;
+        backdrop-filter: blur(20px);
+        list-style: none;
+        color: white;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+      }
+      ul li ul li span,
+      ol li ul li span {
+        color: rgb(170, 197, 204);
+      }
+      section {
+        display: list-item;
+      }
+      li b {
+        font-size: 20px;
+      }
+      ol li {
+        margin: 10px;
+        font-size: 18px;
+      }
+      .spanMove {
+        position: relative;
+        left: 8.9em;
+      }
+    </style>
+    <h1>STRING AND TEMPLATE LITERALS</h1>
+    <h2><u>STRING LITERALS</u></h2>
+    <p>
+      <small>string literals</small> are sequences of characters enclosed within
+      single quotes (' '), double quotes (" "), or backticks (` `). They are
+      used to represent textual data.
+    </p>
+    <p>
+      String literals can contain letters, digits, special characters, and
+      whitespace. They can also represent empty strings by enclosing nothing
+      between the quotes or backticks
+    </p>
+    <ul>
+      <li>
+        Single quotes:
         <ul>
-            <li>create a variable 'schoolTeacher'.</li>
-            <li>log this into console 'my school teacher name is' use template literals to add NO 01 to complete the sentence</li>
-            <li>create a pop up of 'my daily routine' <br> 'i gym 2hours a day' and <br> ''çode 5hours a day'</li>
+          <li>
+            let singleQuotes =
+            <span>' This is a string with single quotes. '</span>
+          </li>
         </ul>
-        <p><mark>HINT</mark> use multi-line template</p>
+      </li>
+      <li>
+        Double quotes:
+        <ul>
+          <li>
+            let doubleQuotes =
+            <span> " This is a string with double quotes. "</span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Backticks:
+        <ul>
+          <li>
+            let backticks = <span>` This is a string with backticks. `</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3><u>Rules and Convention of String Literals</u></h3>
+    <section>
+      <ol>
+        <li>
+          <b>Quoting Styles:</b>&NonBreakingSpace;&NonBreakingSpace; Javascript
+          allows the use of single, double, and backtick quotes for string
+          literals.
+        </li>
+        <li>
+          <b>Escape Sequences:</b>&NonBreakingSpace;&NonBreakingSpace; certain
+          characters can't be friendly included in a string literal and must be
+          escaped using backlashes (). Common escape sequences include \n for
+          newline, \t for tab, and \ for a single backslash.
+        </li>
+        <li>
+          <b>Concatenation:</b>&NonBreakingSpace;&NonBreakingSpace; Strings can
+          be concatenated using the + operator or by placing them next to each
+          other.
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2><u>TEMPLATE LITERALS</u></h2>
+      <p>
+        Template literals are a feature of Javascript that allow for more
+        flexible string formatting and manipulation compared to traditional
+        string literal.
+      </p>
+      <h3><u>FEATURES OF TEMPLATE LITERALS.</u></h3>
+      <ol>
+        <li>
+          <b>Backtick Syntax:</b>&NonBreakingSpace;&NonBreakingSpace; Template
+          literals are enclosed within backticks (` `), rather thatn single or
+          double quotes
+        </li>
+        <li>
+          <b>String Interpolation:</b>&NonBreakingSpace;&NonBreakingSpace;
+          Template literals allow for easy interpolation of variables,
+          expressions, and even function calls within ${} placeholders inside
+          the string.
+          <ul>
+            <li>
+              let name =<span> 'Janet'; </span><br /><br />
+              let stringInterpolation = <span> `My name is ${name}`</span>;
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Multline Strings:</b> Template literals can span multiple lines
+          without the need for explicit line breaks or concatenation, making
+          multine strings more.
+          <ul>
+            <li>
+              let name =<span> 'Janet'; </span><br /><br />
+              let multilineString =
+              <span>
+                `My
+                <span class="spanMove"
+                  ><br />
+                  name <br />
+                  is <br />
+                  ${name}`;</span
+                ></span
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Expression Evaluation:</b>&NonBreakingSpace;&NonBreakingSpace;
+          Expression inside ${} placeholders are evaluated, allowing for dynamic
+          content generation within the string.
+          <ul>
+            <li>
+              let a = 100; <br />
+              let b = 200 <br /><br /><br />
+              let expressionEvaluation =
+              <span>` The sum of ${a} and $b{b} is ${a + b}; `</span>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        Template literals provide a more concise and readable way to work with
+        strings in Javascript, especiall when dealing with dynamic content or
+        multine string.
+      </p>
+      <h3><u>RULES AND CONVENTIONS OF TEMPLATE LITERALS:</u></h3>
+      <ol>
+        <li><b>Backticks Usage:</b> Template literals must be enclosed within backticks (` `) rather than single or double quotes.</li>
+        <li><b>String Interpolation:</b> Placeholders ${} inside the template literals can contain variables, expressions, or function calls. These placeholders are replaced with their corresponding values during runtime.</li>
+        <li><b>Multiline String:</b> Template literals can span multiple lines without requiring explicit line breaks or concatenation. This improves code readability, especially for multiline strings.</li>
+        <li><b>Escape Sequence:</b> backlashes () can be used within template literals to escape backticks or to include special characters.</li>
+        <li><b>Expression Evaluation:</b> Expressions inside ${} placeholders are evaluated. However, only valid Javascript expression are allowed inside the placeholders.</li>
+      </ol>
+    </section>
+
+    <fieldset>
+      <legend>exercise</legend>
+      <ul>
+        <li>create a variable 'schoolTeacher'.</li>
+        <li>
+          log this into console 'my school teacher name is' use template
+          literals to add NO 01 to complete the sentence
+        </li>
+        <li>
+          create a pop up of 'my daily routine' <br />
+          'i gym 2hours a day' and <br />
+          ''çode 5hours a day'
+        </li>
+      </ul>
+      <p><mark>HINT</mark> use multi-line template</p>
     </fieldset>
 
     <script>
+      //         const name = 'Esther';
 
-//         const name = 'Esther';
+      //         console.log(`my name is ${name}`);
 
-//         console.log(`my name is ${name}`);
+      //         let name1 = 'fatimah';
+      //         let age = 24;
+      //         let canDrive = true;
 
-//         let name1 = 'fatimah';
-//         let age = 24;
-//         let canDrive = true;
+      //         console.log(`my name is ${name1}, i am ${age} years old, and i can Drive ${canDrive}`);
 
-//         console.log(`my name is ${name1}, i am ${age} years old, and i can Drive ${canDrive}`);
+      //         alert(`my name is ${name} \n and i am ${age}
+      // and i can ${canDrive} Drive`);
 
-//         alert(`my name is ${name} \n and i am ${age} 
-// and i can ${canDrive} Drive`);
+      // illustrations
+      // console.log("i don't have money");
+      // const text1 = 'my name';
+      // const text2 = 'is';
+      // const text3 = 'Fatimah';
+      // const text4 = 'I am a';
+      // const text5 = 'frontend developer';
+      // console.log(`${text1}  ${text2}  ${text3},  ${text4}  ${text5}`);
 
-        // illustrations
-        // console.log("i don't have money");
-        // const text1 = 'my name';
-        // const text2 = 'is';
-        // const text3 = 'Fatimah';
-        // const text4 = 'I am a';
-        // const text5 = 'frontend developer';
-        // console.log(`${text1}  ${text2}  ${text3},  ${text4}  ${text5}`);
-
-        // // example
-        // const teacherName = 'fatimah';
-        // console.log(`my teacher name is ${teacherName}`);
+      // // example
+      // const teacherName = 'fatimah';
+      // console.log(`my teacher name is ${teacherName}`);
     </script>
-</body>
+  </body>
 </html>

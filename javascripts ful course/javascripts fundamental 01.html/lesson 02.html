@@ -3,62 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variables and values</title>
+    <title>JAVASCRIPT VARIABLE AND VALUE</title>
 </head>
 <body>
     <style>
+          html {
+            font-size: 122.5%;
+            background-color: black;
+        }
         body {
             height: fit-content;
             background: linear-gradient(to top right, #0b1f49, #4f8eab);
             background-repeat: no-repeat;
             background-size: cover;
             color: white;
-            text-transform: capitalize;
-            font-size: 25px;
         }
-        .dl {
-            font-size: 45px;
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            margin: 10px 10px;
+        }
+        dd {
+            background-color: #0b1f49;
+            padding: 10px 10px;
+            margin: 10px;
+            border-radius: 10px;
+            color: red;
+        }
+        mark {
+            background-color: #0b1f49;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            html {
+                font-size: 33.5%;
+            }
+            li {
+                margin: 3px 3px;
+            }
+            dd {
+                margin: 5px 5px;
+            }
         }
 </style>
-    <h1><center>Variable and Value</center></h1>
-    <dt>
-        <dl class="dl"><u><b>Variable</b></u></dl>
-        <dd>Javascripts variable is simply a name of storage location.</dd>
-    </dt>
-    <h3>they are two types of variable in Javascripts</h3>
+    <h1>JAVASCRIPT VARIABLE AND VALUE</h1>
+    <h2><u>What is Variable?</u></h2>
+    <p>Variables stand as essential tools that allows the storage and manipulation of data.   Variables act as containers that hold information vital to a program’s functionality. These data holders gives the power to manage information, make decisions, and create dynamic applications.</p>
+    <p>A JavaScript variable is simply a name of storage location.</p>
+    <p><i>Creating a variable in JavaScript is called <b>"Declaring Variable".</b></i></p>
+    <h3><u>Variable Declaration Syntax:</u></h3>
     <ul>
-        <li>Local variable</li>
-        <li>Global variable</li>
+        <li>Variable names are case-sentitive</li>
+        <li>Variable names can only contain letters, numbers, underscores, or dollar signs and cannot contain spaces.  Also, variable names must begin with a letter, an underscore ( _ ) or a dollar sign ($).</li>
+        <li>Variable names cannot use the reserved words.</li>
+        <li>By convention, variable names use camelCase.</li>
     </ul>
-    <dt>
-        <dl>local variable</dl>
-        <dd>are the type of variable within a function</dd>
-    </dt>
-    <dt>
-        <dl>Global variable</dl>
-        <dd>are the types of variable created outside of a function</dd>
-    </dt>
-    <h3>syntax of variable</h3>
+    <h2><u>What is Value?</u></h2>
+    <p>Javascript values are what stored inside a variable. <mark>Value can be assigned to variable by using the 'assignment operator'. (=).</mark></p>
+    <h3>Types of Value in JavaScript</h3>
     <ul>
-        <li>camelCase is accepted</li>
-        <li>does not accept any special characters except: _ and $ sign</li>
-        <li>must not start with number</li>
-        <li>no Js reserved keywords should be used.</li>
+        <li><b>Object:</b>&NonBreakingSpace;&NonBreakingSpace; Object is a collection of unordered properties. Properties can usually be changed, added, and deleted, but some are read only.</li>
+        <li><b>Primitive:</b>&NonBreakingSpace;&NonBreakingSpace; Primitive values are data that are stored directly in a variable.</li>
     </ul>
-    <dt>
-        <dl class="dl"><u><b>Value</b></u></dl>
-        <dd>Javascripts value are what stored inside a variable</dd>
-    </dt>
-    <h3>they are two types of value</h3>
+    <dl>
+        <dt>Example of Variable and Value in Code</dt>
+        <dd>
+            let&NonBreakingSpace; name &NonBreakingSpace; = &NonBreakingSpace;&NonBreakingSpace;'Fatimah';
+        </dd>
+    </dl>
+    <h4>Conclusion:</h4>
     <ul>
-        <li>object</li>
-        <li>primitive</li>
+        <li>Variables are used to store and manage data within a program.</li>
+        <li> They act as containers that hold different types of information, such as numbers, text, or objects, and allow you to manipulate and work with that data in your code.</li>
+        <li>Variables provide a way to temporarily store and reference values, making it easier to work with dynamic and changing data in your programs</li>
     </ul>
     <fieldset>
         <legend>Exercises</legend>
         <ul>
-            <li>create a variable of 'Nationality', 'Gender' and 'Status'.. give each value equivalent to your information</li>
-            <li>log their values into a console</li>
+            <li>Create a variable of <b> 'Nationality'</b>, <b> 'Gender' </b> and <b> 'Status'</b>. Give each value that's equivalent to your information</li>
+            <li>Log the values to the console</li>
         </ul>
     </fieldset>
     <script>

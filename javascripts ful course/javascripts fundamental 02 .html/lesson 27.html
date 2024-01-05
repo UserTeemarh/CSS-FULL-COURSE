@@ -12,7 +12,6 @@
             background-repeat: no-repeat;
             background-size: cover;
             color: white;
-            text-transform: capitalize;
             font-size: 25px;
         }
         fieldset {
@@ -21,9 +20,54 @@
         ul li {
             margin: 10px;
         }
+        .while {
+            background: rgba(8, 1, 1, 0.822);
+            width: 300px;
+            padding: 12px;
+            border-radius: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: gainsboro;
+            font-weight: 100;
+        }
+        dt, dl {
+            font-weight: 900;
+            font-size: 27px; 
+            text-transform: capitalize;       
+            }
+            @media (max-width: 600px) {
+                body {
+                    margin: 0;
+                    font-size: 10px;
+                }
+
+            }
 </style>
-<h1><center>the while loop</center></h1>
-<p>the while statement creates a loop that executes a specified statement as long as the test condition evaluates to true</p>
+<h1><center>THE WHILE LOOP</center></h1>
+<p>The <small>while</small> statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluted before executing the statement.</p>
+<h3 style="text-transform: uppercase;">The while loop <u>syntax</u></h3>
+<dt>
+    <dl>Condition</dl>
+    <dd>An expression evaluated before each pass through the loop. If this condition <u>evaluates to true,</u> statement is executed. When condition <u>evaluates to false,</u> execution continues with the statement after the <small>while</small> loop.</dd>
+</dt>
+<dt>
+    <dl>statement</dl>
+    <dd>An optional statement that is executed as long as the condition evalutes to true. To execute multiple statements within the loop, use a <u>block</u> statement to group those statements.</dd>
+</dt>
+<dt>
+    <dl style="font-size: 24px; font-style: italic;">Example</dl>
+    <dd>
+        <ul class="while">
+            <li>&NonBreakingSpace;&NonBreakingSpace;let &NonBreakingSpace; i &NonBreakingSpace; = &NonBreakingSpace; 0 <br> while &NonBreakingSpace; (i <= 5) &NonBreakingSpace; { <br>&NonBreakingSpace;&NonBreakingSpace; console.log(i); <br> &NonBreakingSpace;&NonBreakingSpace; i++ ; <br> }</li>
+        </ul>
+        <p><i>here is a breakdown:</i></p>
+        <ul>
+            <li><small>while:</small> keyword indicating the start of while loop</li>
+            <li><small>(condition)</small>: A condition that is evaluated before each iteration. If the condition is true, the code block inside the loop is executed. If false, the loop exits.</li>
+            <li><small>{code}</small>: The block of code to be executed if the condition is true.</li>
+        </ul>
+    </dd>
+</dt>
 <fieldset>
     <legend>exercises</legend>
     <ul>
@@ -51,56 +95,8 @@
         <li>call the function with the 'totals' array</li>
     </ul>
 </fieldset>
-<!-- <script>
+ <script src="lesson 27.js">
 
-function percentageOfWorld(population) {
-        return (population / 7900) * 100;
-    }
-
-    const populations = [34, 56, 87, 90];
-    const percentages = [
-        percentageOfWorld(populations[0]),
-        percentageOfWorld(populations[1]),
-        percentageOfWorld(populations[2]),
-        percentageOfWorld(populations[2])
-    ];
-    console.log(percentages);
-
-    const percentages2 = [];
-    let i = 0;
-    while(i < populations.length) {
-        const perc = percentageOfWorld(populations[i]);
-        percentages2.push(perc);
-        i++;
-    }
-console.log(percentages2);
-
-function calTip(bill) {
-        return bill >= 50 && bill >= 300 ? bill * 0.15 : bill * 0.20;
-        }      
-let bills = [22,295,176,440,37,105,10, 1100,86,52];
-
-let tips = [];
-let totals = [];
-
-for (let i = 0; i < bills.length; i++) {
-    const tip = calTip(bills[i]);
-    tips.push(tip);
-    totals = ;
-}    
-console.log(bills, tips,totals);
-
-function calcAverage (arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-   return sum / arr.length;
-}
-console.log(calcAverage([2,3,5]));
-console.log(calcAverage(totals));
-console.log(calcAverage(bills));
-console.log(calcAverage(tips)); -->
 
 
 

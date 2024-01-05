@@ -3,57 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>var,let and const</title>
+    <title>LET, CONST, AND VAR</title>
 </head>
 <body>
     <style>
+        html {
+            font-size: 122.5%;
+            background-color: black;
+        }
             body {
-            height: 100vh;
+            padding: 10px;
             background: linear-gradient(to top right, #0b1f49, #4f8eab);
             background-repeat: no-repeat;
             background-size: cover;
             color: white;
-            text-transform: capitalize;
-            font-size: 25px;
+        }
+        p{
+            margin: 2px;
+        }
+        .var {
+            background-color: #0b1f49;
+            padding: 10px 10px;
+            border-radius: 10px;
+            color: red;
+        }
+        mark {
+            background-color: #0b1f49;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            margin-top: 0;
+            padding: 0;
+        }
+        @media (max-width: 600px) {
+            html {
+                font-size: 33.5%;
+            }
+          
         }
     </style>
-    <h1><center>var, let and const</center></h1>
+    <h1>VAR, CONST, AND LET VARIABLE</h1>
+    <p>Variables are how programmers give a name to a value so that It can be reused, updated, or simply keep track of it. Variables can be used to store any JavaScript type.</p>
+    <h2><u>How to use the <small>var</small> keyword in JavaScript</u></h2>
     <dt>
-        <dl>let</dl>
-        <dd>let can be used to declare variable that would be later changed</dd>
+        <dd>Keywords in JavaScript are reserved words. When the var  keyword is used, It tells JavaScript that they will be a declaration of a variable.</dd>
+        <dd>When using the var keyword, variables can be reassigned. </dd>
     </dt>
-    <dt>
-        <dl>const</dl>
-        <dd>const keywords are used on variable that cannot be changed</dd>
-    </dt>
+    <dl>
+        <dt>Illustration of the <small>var</small> variable</dt>
+        <dd class="var">var&NonBreakingSpace; name &NonBreakingSpace;= &NonBreakingSpace;&NonBreakingSpace;'Jonas Benedict'</dd>
+    </dl>
+    <p><b>NOTE:</b> <mark> The var keyword was used in all JavaScript code from 1995 to 2015.&NonBreakingSpace;The var keyword should only be used in code written for older browsers.</mark></p>
+    <h2><u>How to use the const keyword in JavaScript</u></h2>
+    <p>Const (constant) in programming is a <mark>keyword that defines a variable or pointer as unchangeable.</mark></p>
+    <p>A const may be applied in an object declaration to indicate that the object, unlike a standard variable, does not change.</p>
+    <h3>Const Description:</h3>
+    <ul>
+        <li>The const declaration creates an immutable reference to a value. It does not mean the value it holds is immutable — just that the variable identifier cannot be reassigned</li>
+        <li>Constants can be declared with uppercase or lowercase, but a common convention is to use all-uppercase letters, especially for primitives because they are truly immutable.</li>
+    </ul>
+    <dl>
+        <dt>Illustration of the <small>const</small> variable</dt>
+        <dd class="var">const&NonBreakingSpace; name &NonBreakingSpace;= &NonBreakingSpace;&NonBreakingSpace;'Jonas Benedict'</dd>
+    </dl>
+    <h2><u>How to use the let keyword in JavaScript</u></h2>
+    <p>Let is a keyword that is used to declare a block scoped variable. Usually, the var keyword is used to declare a variable in JavaScript which is treated as a normal variable, but the variables declared using the let keyword are block scoped.</p>
+    <p><mark>The let keyword was introduced in ES6 (2015)</mark></p>
+    <h3>Let Description:</h3>
+    <ul>
+        <li>Variables declared with <small>let</small> have Block Scope</li>
+        <li>Variables declared with <small>let</small> must be Declared before use</li>
+        <li>Variables declared with <small>let</small> cannot be Redeclared in the same scope</li>
+    </ul>
+    <dl>
+        <dt>Illustration of the <small>let</small> variable</dt>
+        <dd class="var">let&NonBreakingSpace; name &NonBreakingSpace;= &NonBreakingSpace;&NonBreakingSpace;'Jonas Benedict'</dd>
+    </dl>
     <fieldset>
-        <legend>exercises</legend>
+        <legend>Exercises</legend>
         <ul>
-            <li>set the value of 'dateOfBirth' to your birth year</li>
-            <li>think what value that can never change, then change the variable to const</li>
-            <li>try to resue the variable of  NO 02. observe what happens</li>
-            <li>declare a variable of 'language' of which is spoken in your country(your country might be speaking many languages, but just choose one)</li>
+            <li>Set the value of 'dateOfBirth' to your birth year</li>
+            <li>Think of what value that can never change, then change the variable to <b>const</b></li>
+            <li>Try to resue the variable of  NO 02. observe what happens</li>
+            <li>Declare a variable of 'language' of which is spoken in your country(your country might be speaking many languages, but just choose one)</li>
         </ul>
     </fieldset>
-    <!-- let and const are the modern way of declaring a variable. while var is the old way of declaring a variable-->
     <script>
-        let age = 25;
-        age = 45;
-        let surname = 'william';
-        surname = 'david';
-        console.log(surname);
-        const birthYear = 1997;
-        const birthyear = 78;
-        
-
-        const name = 'esther';
-        console.log(name);
-
-        console.log(birthyear)
-        console.log(birthYear)
-        console.log(age);
-        let language = 'Yoruba';
-        console.log(language);
+        function decl() {
+            carName = 'Toyota';
+            return carName;
+        }
+        console.log(decl())
     </script>
 </body>
 </html>
